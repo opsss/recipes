@@ -1,0 +1,64 @@
+
+
+body.new.registrations {
+	.devise_bg_inners {
+		z-index: -1;
+		position: absolute;
+		top:0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background: url(devise_reg.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.align_block {
+		height: 427px;
+	}
+}
+
+body.new.sessions {
+	.devise_bg_inners {
+		z-index: -1;
+		position: absolute;
+		top:0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background: url(log_in.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	a {
+		color: #fff;
+	}
+}
+
+.registration_wrapper {
+	margin: 7% auto 0;
+	max-width: 500px;
+	border-radius: 5px;
+	color: #fff;
+	background: rgba(245, 244, 243, 0.15);
+	padding: 10px 20px 20px 20px;
+}
+
+.btn-vh {
+	margin-top: 10px;
+}
+
+.align_block {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	max-width: 550px;
+	height: 310px;
+}

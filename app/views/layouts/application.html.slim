@@ -8,6 +8,18 @@ html
 		= csrf_meta_tags
 
 	body class = controller.controller_name
-		.page_content 
+		.page_content
+			.fx_bg_inners
+			.recepes_link = link_to "Рецепты", recipes_path(@recipe)
+			header.header_top.row
+				ul.header-right-menu
+					- if user_signed_in?
+						li = link_to 'Добавить рецепт', new_recipe_path
+						li = link_to 'Профиль', current_user
+						li = link_to 'Выйти', destroy_user_session_path, method: :delete
+					- else
+						li = link_to "Зарегистрируйтесь", new_user_registration_path
+						li = link_to "Войти", new_user_session_path
+			.container.inner_page
 				== yield
 		

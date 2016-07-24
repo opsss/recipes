@@ -7,11 +7,11 @@ html
 		= javascript_include_tag "application", 'data-turbolinks-track' => true
 		= csrf_meta_tags
 
-	body
-		.page_welcome
-			.fx_bg_main
-			.recepes_link = link_to "Рецепты", recipes_path
-			header.header_top
+	body class == controller.action_name class == controller.controller_name
+		.page_content
+			.devise_bg_inners
+			.recepes_link = link_to "Рецепты", recipes_path(@recipe)
+			header.header_top.row
 				ul.header-right-menu
 					- if user_signed_in?
 						li = link_to 'Добавить рецепт', new_recipe_path
@@ -20,7 +20,5 @@ html
 					- else
 						li = link_to "Зарегистрируйтесь", new_user_registration_path
 						li = link_to "Войти", new_user_session_path
-
-			.center_main
-				= render 'site_search'
-				
+			== yield
+		

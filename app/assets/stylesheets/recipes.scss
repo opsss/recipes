@@ -2,6 +2,9 @@
 @import "fonts.scss";
 
 
+
+
+
 .page_recipes {
 	position: relative;
 	height: 100%;
@@ -16,9 +19,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-
 		margin: auto;
-		
 		border-radius:5px;
 		padding: 1% 2%;
 	}
@@ -48,20 +49,72 @@ main.add_recipe_section {
 	margin: 20px 0; 
 }
 
-.recipe_fx_bg {
-	position: absolute;
-	top:0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	background: url(add_recipe.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+
+body.new.recipes {
+	.recipe_fx_bg {
+		position: absolute;
+		top:0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background: url(add_recipe.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+
+body.index.recipes {
+	.recipe_fx_bg {
+		position: absolute;
+		top:0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background: url(recipes.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+
+body.show.recipes{
+	.recipe_fx_bg {
+		position: absolute;
+		top:0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background: url(recipe_show.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
 }
 
 
 .new_recipe {
 	color:#fff;
 }
+
+.recipe_content {
+	padding: 25px 25px;
+	margin: 0 auto;
+	max-width: 1280px;
+	position: relative;
+	background: rgba(245, 244, 243, 0.15);
+	margin: 7% auto 0;
+}
+
+.recipe {
+	max-width: 100%;
+	overflow: hidden;
+	border-radius: 5px;
+	img {
+		max-width: 100%;
+	}
+}
+

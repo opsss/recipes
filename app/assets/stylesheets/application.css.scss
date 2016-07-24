@@ -32,31 +32,55 @@
  	height: 100%;
  	min-height: 100%;
  	height: auto !important;
+ 	z-index: 1;
+ }
+
+ .recepes_link {
+ 	position: absolute;
+ 	top:20px;
+ 	left: 0;
+ 	z-index: 100;
+ 	background-color: rgba(249, 249, 249, 0.67);
+ 	padding: 12px 20px;
+ 	border-radius: 5px;
+ 	color: #461c1c;
+ 	font: normal 16px 'RobotoRegular';
+ 	cursor: pointer;
+ 	margin-left: 20px;
+ 	border: 1px solid #ccc;
+ 	a {
+ 		color: #461c1c;
+ 	}
  }
 
 
  header.header_top {
-	position: relative;
-	z-index: 2;
-	padding: 20px 40px 0 0;
-	ul.header-right-menu {
-		float: right;
-		li {
-			display: inline-block;
-			vertical-align: top;
-			a {
-				display: block;
-				background-color: rgba(249, 249, 249, 0.67);
-				padding: 12px 20px;
-				border-radius: 5px;
-				color: #461c1c;
-				font: normal 16px 'RobotoRegular';
-				cursor: pointer;
-				margin-left: 20px;
-				border: 1px solid #ccc;
-			}
-		}
-	}
-}
+ 	position: relative;
+ 	z-index: 2;
+ 	padding: 20px 40px 0 0;
+ 	ul.header-right-menu {
+ 		float: right;
+ 		li {
+ 			display: inline-block;
+ 			vertical-align: top;
+ 			a {
+ 				display: block;
+ 				background-color: rgba(249, 249, 249, 0.67);
+ 				padding: 12px 20px;
+ 				border-radius: 5px;
+ 				color: #461c1c;
+ 				font: normal 16px 'RobotoRegular';
+ 				cursor: pointer;
+ 				margin-left: 20px;
+ 				border: 1px solid #ccc;
+ 			}
+ 		}
+ 	}
+ }
+
+
+	
+
+ 
 
 
