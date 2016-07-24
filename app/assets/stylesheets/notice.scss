@@ -1,0 +1,33 @@
+ .pop_notice {
+ 	position: absolute;
+ 	left: 0;
+ 	top:0;
+ 	right: 0;
+ 	text-align: center;
+ 	animation: fadeOut 3s linear forwards;
+ 	background:#000;
+ 	padding: 15px 0;
+ 	z-index: 999;
+ 	color: #fff;
+ }
+
+ .pop_notice_error {
+ 	position: absolute;
+ 	left: 0;
+ 	top:0;
+ 	right: 0;
+ 	text-align: center;
+ 	animation: fadeOut 3s linear forwards;
+ 	background:red;
+ 	padding: 15px 0;
+ 	z-index: 999;
+ 	color: #fff;
+ }
+
+ @keyframes fadeOut {
+ 	0%  { opacity: 0; }
+ 	10% { opacity: 1; }
+ 	90% { opacity: 1; transform: translateY(0px);}
+ 	99% { opacity: 0; transform: translateY(-30px);}
+ 	100% { opacity: 0; }
+ }

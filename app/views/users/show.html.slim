@@ -1,0 +1,9 @@
+h1 = @user.username
+
+p = @user.email
+
+- @user.recipes.each do |recipe|
+	.recipe_name
+		= link_to recipe.title, recipe_path(recipe)
+		= link_to "Удалить", recipe_path(recipe), method: :delete, data: {confirm: "Вы уверены ?"}, class: "btn btn-default"
+

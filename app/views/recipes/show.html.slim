@@ -1,0 +1,20 @@
+.recipe_content
+	.recipe_top.row
+		.col-md-4
+			.recipe_pic_inner
+				= image_tag @recipe.image.url(:medium, class: "recipe_image_inner")
+		.col-md-8
+			h1 = @recipe.title
+			p  = @recipe.body
+
+/ p
+/   = @recipe.title
+/ p
+/   = @recipe.body
+/ p
+/ 	= image_tag @recipe.image.url(:medium)
+
+
+/ = link_to 'Изменить', edit_recipe_path(@recipe), class: "btn btn-default"
+
+/ = link_to 'Назад', recipes_path, class: "btn btn-default"

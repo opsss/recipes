@@ -1,0 +1,24 @@
+doctype html
+html
+	head
+		title Recipes App
+		meta name="viewport" content="width=device-width, initial-scale=1.0"
+		= stylesheet_link_tag    "application", media: 'all', 'data-turbolinks-track' => true
+		= javascript_include_tag "application", 'data-turbolinks-track' => true
+		= csrf_meta_tags
+
+	body
+		.page_welcome
+			.fx_bg_main
+			header.header_top
+				ul.header-right-menu
+					- if user_signed_in?
+						li = link_to 'Добавить рецепт', new_recipe_path
+						li = link_to 'Профиль', current_user
+						li = link_to 'Выйти', destroy_user_session_path, method: :delete
+					- else
+						li = link_to "Зарегистрируйтесь", new_user_registration_path
+						li = link_to "Войти", new_user_session_path
+
+			.center_main
+				= render 'site_search'

@@ -1,0 +1,68 @@
+
+@import "fonts.scss";
+
+.fx_bg_main {
+	position: absolute;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: url(fx_bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+.page_welcome {
+	position: relative;
+	height: 100%;
+	min-height: 100%;
+	height: auto !important;
+}
+
+
+
+.center_main {
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 400px;
+	//background: rgba(245, 244, 243, 0.15);
+	margin: auto;
+	max-width: 1280px;
+	border-radius:5px;
+}
+
+.welcome-search {
+	position: absolute;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	width: 96%;
+	height: 55px;
+	.welcome-control {
+		height: 55px;
+		background-color: rgba(255, 255, 255, 0.48);
+		font-family: 'RobotoRegular';
+		font-size: 1.7rem;
+		color: #5b7564;
+		&:focus {
+			border-color: rgba(223, 240, 216, 0.15);
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #dff0d8;
+		}
+	}
+
+}
+
+input::-webkit-input-placeholder { color: #5b7564 !important; }
+input:-moz-placeholder { color: #5b7564 !important; }
+
+.search-btn-welcome {
+	display: none;
+}

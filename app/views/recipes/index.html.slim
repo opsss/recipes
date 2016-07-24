@@ -1,0 +1,35 @@
+
+/ table
+/   thead
+/     tr
+/       th Title
+/       th Body
+/       th User
+/       th
+/       th
+/       th
+
+/   tbody
+/     - @recipes.each do |recipe|
+/       tr
+/         td = recipe.title
+/         td = recipe.body
+/         td = recipe.user_id
+/         td = link_to 'Show', recipe
+/         td = link_to 'Edit', edit_recipe_path(recipe)
+/         td = link_to 'Destroy', recipe, data: { confirm: 'Are you sure?' }, method: :delete
+
+/ br
+
+
+h1 Последнее добавленное
+.recipe_wrapper
+  - @recipes.each do |recipe|
+    .recipe.col-md-4 
+      .recipe_title = recipe.title
+      .recipe_pic  
+        = link_to recipe do
+            = image_tag recipe.image.url(:medium)
+
+
+/= link_to 'New Recipe', new_recipe_path
