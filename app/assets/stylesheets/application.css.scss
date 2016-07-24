@@ -10,8 +10,10 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+
  *= require_tree .
  *= require_self
+ *= require 'masonry/transitions'
  */
 
  @import "bootstrap-sprockets";
@@ -35,23 +37,33 @@
  	z-index: 1;
  }
 
- .recepes_link {
+ .top_header_left {
  	position: absolute;
  	top:20px;
  	left: 0;
  	z-index: 100;
- 	background-color: rgba(249, 249, 249, 0.67);
- 	padding: 12px 20px;
- 	border-radius: 5px;
- 	color: #461c1c;
- 	font: normal 16px 'RobotoRegular';
- 	cursor: pointer;
- 	margin-left: 20px;
- 	border: 1px solid #ccc;
- 	a {
- 		color: #461c1c;
+ 	ul {
+ 		padding: 0;
+ 		margin:0;
+ 		font-size: 0;
+ 		li {
+ 			display: inline-block;
+ 			vertical-align: top;
+ 			a {
+ 				background-color: rgba(249, 249, 249, 0.67);
+ 				padding: 12px 20px;
+ 				border-radius: 5px;
+ 				color: #461c1c;
+ 				font: normal 16px 'RobotoRegular';
+ 				cursor: pointer;
+ 				margin-left: 20px;
+ 				border: 1px solid #ccc;
+ 				display: block;
+ 			}
+ 		}
  	}
  }
+
 
 
  header.header_top {
@@ -79,7 +91,7 @@
  }
 
 
-	
+
 
  
 

@@ -100,6 +100,21 @@ body.show.recipes{
 	color:#fff;
 }
 
+
+
+.recipe_wrapper {
+	position: relative;
+	.recipe_title {
+		padding: 20px;
+		background: rgba(245, 244, 243, 0.15);
+		margin-bottom: 20px;
+		border-radius:0 0 5px 5px;
+		font-family: 'RobotoRegular';
+		font-size: 1.7rem;
+		color: #fff;
+	}
+}
+
 .recipe_content {
 	padding: 25px 25px;
 	margin: 0 auto;
@@ -109,12 +124,21 @@ body.show.recipes{
 	margin: 7% auto 0;
 }
 
-.recipe {
+
+
+.recipe_pic {
 	max-width: 100%;
 	overflow: hidden;
-	border-radius: 5px;
+	border-radius: 5px 5px 0 0;
 	img {
 		max-width: 100%;
+		height: auto;
+		vertical-align: middle;
 	}
 }
+
+.recipe_title {
+
+}
+
 

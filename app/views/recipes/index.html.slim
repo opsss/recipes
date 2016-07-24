@@ -17,6 +17,14 @@
 /         td = recipe.user_id
 /         td = link_to 'Show', recipe
 /         td = link_to 'Edit', edit_recipe_path(recipe)
+
+    		/ .recipes.col-md-4 
+    		/ 	.recipe_title = recipe.title
+      / 		.recipe_pic  
+      /   		= link_to recipe 
+      /       	= image_tag recipe.image.url(:medium)
+
+
 /         td = link_to 'Destroy', recipe, data: { confirm: 'Are you sure?' }, method: :delete
 
 / br
@@ -24,12 +32,15 @@
 
 h1 Последнее добавленное
 .recipe_wrapper.container
-  - @recipes.each do |recipe|
-    .recipe.col-md-4 
-      .recipe_title = recipe.title
-      .recipe_pic  
-        = link_to recipe do
-            = image_tag recipe.image.url(:medium)
+	- @recipes.each_slice(3) do |recipes|
+		.row
+ 			- recipes.each do |recipe|
+ 				.recipe_item.col-md-4
+ 					.recipe_pic
+ 						= link_to recipe
+ 							= image_tag recipe.image.url(:medium)
+ 					.recipe_title = recipe.title
+
 
 
 /= link_to 'New Recipe', new_recipe_path
