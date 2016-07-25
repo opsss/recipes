@@ -1,0 +1,9 @@
+.search_page_show
+	h1 Результаты
+	ul.nav_find_search_results
+		- @search.each do |recipe|
+			- if recipe.blank?
+				li fsdfsd
+			- else
+				li
+					= link_to recipe.title, recipe_path(recipe)

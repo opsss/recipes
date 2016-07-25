@@ -2,6 +2,10 @@ class UsersController < ApplicationController
 	layout "users"
 	before_filter :authenticate_user!
 	before_action :set_recipe, only: [:show]
+
+	def index
+		
+	end
 	
 	def show
 	end

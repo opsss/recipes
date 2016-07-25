@@ -10,7 +10,12 @@ html
 	body class = controller.controller_name
 		.page_content
 			.fx_bg_inners
-			.recepes_link = link_to "Рецепты", recipes_path(@recipe)
+			.top_header_left
+				ul.nav_left_links
+					li
+						= link_to "Главная", root_path
+					li
+						= link_to "Рецепты", recipes_path
 			header.header_top.row
 				ul.header-right-menu
 					- if user_signed_in?

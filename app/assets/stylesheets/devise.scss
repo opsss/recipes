@@ -19,7 +19,7 @@ body.new.registrations {
 	}
 }
 
-body.new.sessions {
+body.new.sessions, body.create.registrations{
 	.devise_bg_inners {
 		z-index: -1;
 		position: absolute;
@@ -34,8 +34,20 @@ body.new.sessions {
 		background-size: cover;
 	}
 
-	a {
-		color: #fff;
+	.registration_wrapper {
+		a {
+			color: #fff;
+		}
+	}
+
+}
+
+body.create.registrations  {
+	.align_block {
+		height: 603px;
+	}
+	.btn-vh {
+		color: #000 !important;
 	}
 }
 
@@ -46,6 +58,7 @@ body.new.sessions {
 	color: #fff;
 	background: rgba(245, 244, 243, 0.15);
 	padding: 10px 20px 20px 20px;
+
 }
 
 .btn-vh {
