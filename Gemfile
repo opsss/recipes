@@ -34,8 +34,8 @@ gem 'slim-rails', '~> 3.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'paperclip', '~> 5.0'
 gem 'devise'
-gem 'masonry-rails', '~> 0.2.4'
-
+gem 'russian', '~> 0.6.0'
+gem 'friendly_id', '~> 5.1'
 gem 'searchkick'
 
 

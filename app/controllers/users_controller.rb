@@ -4,7 +4,6 @@ class UsersController < ApplicationController
 	before_action :set_recipe, only: [:show]
 
 	def index
-		
 	end
 	
 	def show

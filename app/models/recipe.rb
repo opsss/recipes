@@ -1,5 +1,7 @@
 
 class Recipe < ApplicationRecord
+	extend FriendlyId
+	friendly_id :title, use: :slugged
 	searchkick
 
 	validates :title, :body, presence: true
