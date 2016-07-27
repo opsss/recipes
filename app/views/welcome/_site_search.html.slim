@@ -5,5 +5,7 @@
 
 nav.welcome-search
 	= form_tag(search_path, method: "get") do
-		= text_field_tag :q, params[:q], placeholder: "Поиск рецептов", class: "form-control welcome-control"
+		= text_field_tag :query, params[:query], placeholder: "Поиск рецептов", class: "form-control welcome-control typeahead"
 		= submit_tag "Search", name: nil, class:"search-btn-welcome"
+
+

@@ -6,7 +6,7 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.json
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.all.order("created_at DESC")
   end
 
   # GET /recipes/1
@@ -63,6 +63,12 @@ class RecipesController < ApplicationController
     end
   end
 
+  def autocomplete
+    render json: Recipe.search(params[:query], autocomplete: true, limit: 10).map do |recipe|
+      { title: title.title}
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recipe
@@ -73,4 +79,4 @@ class RecipesController < ApplicationController
     def recipe_params
       params.require(:recipe).permit(:title, :body, :image)
     end
-end
+  end

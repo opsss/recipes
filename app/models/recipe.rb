@@ -2,7 +2,7 @@
 class Recipe < ApplicationRecord
 	extend FriendlyId
 	friendly_id :title, use: :slugged
-	searchkick
+	searchkick autocomplete: ['title']
 
 	validates :title, :body, presence: true
 	has_attached_file :image, styles: { medium: "400x400>" }

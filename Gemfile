@@ -37,7 +37,7 @@ gem 'devise'
 gem 'russian', '~> 0.6.0'
 gem 'friendly_id', '~> 5.1'
 gem 'searchkick'
-
+gem 'twitter-typeahead-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
